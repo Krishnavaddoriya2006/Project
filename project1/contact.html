@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - School Management</title>
+    <link rel="stylesheet" href="contact.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Contact Us</h2>
+        <form action="submit_contact.php" method="POST">
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="name" placeholder="Enter your name" required>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+            
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="4" placeholder="Type your message here..." required></textarea>
+            
+            <button type="submit">Send Message</button>
+
+            <!-- Register Button -->
+            <button type="button" onclick="window.location.href='login.html'">Register</button>
+        </form>
+        
+        <div class="contact-info">
+            <h3>School Contact Information</h3>
+            <p><strong>Address:</strong> 123 School Street, City, Country</p>
+            <div class="map-container">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3671.2626872626984!2d72.5430062!3d23.0508291!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395e85e2b00e2f39%3A0xbf5e3df0e90ec706!2sDivyapath%20School!5e0!3m2!1sen!2sin!4v1744627099943!5m2!1sen!2sin" width="200" height="100" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            <p><strong>Phone:</strong> +91 9876543210</p>
+            <p><strong>Email:</strong> info@schoolnest.com</p>
+        </div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,195 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+  }
+
+  body {
+    background: linear-gradient(135deg, #e0f7fa, #ffffff);
+    color: #333;
+    overflow-x: hidden;
+  }
+
+  /* Unique Circular Background */
+  body::before {
+    content: '';
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(circle, #5e60ce, #4361ee);
+    border-radius: 50%;
+    top: -100px;
+    left: -100px;
+    z-index: -1;
+    opacity: 0.3;
+  }
+
+  body::after {
+    content: '';
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    background: radial-gradient(circle, #f72585, #7209b7);
+    border-radius: 50%;
+    bottom: -50px;
+    right: -50px;
+    z-index: -1;
+    opacity: 0.3;
+  }
+
+  .header {
+    text-align: center;
+    padding: 50px 20px 20px;
+  }
+
+  .header h1 {
+    font-size: 3rem;
+    color: #333;
+  }
+
+  .header p {
+    font-size: 1rem;
+    color: #555;
+    letter-spacing: 2px;
+  }
+
+  .search-container {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin: 20px;
+    flex-wrap: wrap;
+  }
+
+  .search-container input,
+  .search-container select {
+    padding: 10px 15px;
+    border: 2px solid #ccc;
+    border-radius: 30px;
+    outline: none;
+    width: 220px;
+    transition: 0.3s;
+  }
+
+  .search-container input:focus,
+  .search-container select:focus {
+    border-color: #5e60ce;
+  }
+
+  .book-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 30px;
+    padding: 30px;
+  }
+
+  .book-card {
+    background: #fff;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+  }
+
+  .book-card:hover {
+    transform: translateY(-8px);
+  }
+
+  .book-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+
+  .book-info {
+    padding: 15px;
+  }
+
+  .book-info h3 {
+    color: #333;
+  }
+
+  .book-info p {
+    color: #777;
+    font-size: 0.9rem;
+  }
+
+  .footer {
+    text-align: center;
+    padding: 15px;
+    background: linear-gradient(90deg, #b2d8f7, #cdeafe);
+    color: #333;
+    margin-top: 40px;
+    border-radius: 30px 30px 0 0;
+    font-weight: 500;
+  }
+
+  /* Dropdown Menu Button */
+  .dropdown-wrapper {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 999;
+  }
+
+  .icon-wrapper {
+    background-color: #ffffff;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    transition: 0.3s ease;
+  }
+
+  .icon-wrapper:hover {
+    background-color: #e6f0ff;
+  }
+
+  .icon {
+    width: 30px;
+    height: 4px;
+    background-color: #003366;
+    margin: 5px 0;
+    border-radius: 2px;
+  }
+
+  /* Dropdown Styles */
+  .dropdown {
+    display: none;
+    position: absolute;
+    top: 45px;
+    right: 0;
+    background-color: #fff;
+    padding: 10px 0;
+    min-width: 170px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    border-radius: 8px;
+  }
+
+  .icon-wrapper:hover .dropdown,
+  .icon-wrapper:focus-within .dropdown {
+    display: block;
+  }
+
+  .dropdown ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .dropdown ul li {
+    padding: 10px 20px;
+    transition: background 0.3s;
+  }
+
+  .dropdown ul li:hover {
+    background-color: #f0f8ff;
+  }
+
+  .dropdown ul li a {
+    text-decoration: none;
+    color: #003366;
+    font-weight: 500;
+  }
